@@ -15,11 +15,13 @@ import css3 from "../assets/icons/css3.png";
 import git from "../assets/icons/git.png";
 import svelte from "../assets/icons/svelte.png";
 import linux from "../assets/icons/linux.png";
+import csharp from "../assets/icons/csharp.png";
 
 export default function Skills() {
   const skills = [
     { name: "Java", source: java },
     { name: "Python", source: python },
+    { name: "C#", source: csharp },
     { name: "TensorFlow", source: tensorflow },
     { name: "PyTorch", source: pytorch },
     { name: "React", source: react },
@@ -55,7 +57,7 @@ export default function Skills() {
   return (
     <div className="w-full h-screen pt-24 bg-black ">
       <motion.div
-        className="w-full h-full py-20 bg-white rounded-t-3xl "
+        className="flex-1 w-full h-full py-20 bg-white rounded-t-3xl "
         ref={container}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

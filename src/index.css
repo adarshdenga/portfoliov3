@@ -14,7 +14,8 @@
 }
 
 .entryanimatortext {
-  animation: entry-text-color 2500ms ease forwards;
+  color: white;
+  animation: fade-to-black 3200ms ease forwards;
 }
 
 .contact-link-icon {
@@ -87,14 +88,11 @@
   }
 }
 
-@keyframes entry-text-color {
-  0% {
-    color: black;
-  }
-  25% {
+@keyframes fade-to-black {
+  0%{
     color: white;
   }
-  75% {
+  80% {
     color: white;
   }
   100% {
@@ -120,14 +118,5 @@
   to {
     transform: translateX(2em);
     color: white;
-  }
-}
-
-@keyframes go-to-color {
-  from {
-    filter: grayscale(1);
-  }
-  to {
-    filter: grayscale(0);
   }
 }

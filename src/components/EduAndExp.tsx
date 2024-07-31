@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 export default function EduAndExp() {
   return (
     <div className="w-full h-screen pt-24 bg-white">
-      <div className="flex flex-col w-full h-full bg-black justify-center items-center rounded-t-3xl">
-        <div className="container min-h-max flex flex-col py-40 justify-center">
+      <div className="flex flex-col w-full h-full py-40 justify-between bg-black items-center rounded-t-3xl">
+        <div className="container flex flex-col justify-center">
           <div className="text-4xl text-warmGray-500 font-dmsans mb-3 pb-3 border-b-2 border-warmGray-500">
             Experience
           </div>
@@ -27,7 +27,7 @@ export default function EduAndExp() {
           </div>
         </div>
 
-        <div className="container h-1/2 flex flex-col pb-40 justify-center">
+        <div className="container flex flex-col justify-center">
           <div className="text-4xl text-warmGray-500 font-dmsans mb-3 pb-3 border-b-2 border-warmGray-500">
             Education
           </div>

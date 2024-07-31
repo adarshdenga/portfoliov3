@@ -8,7 +8,6 @@ import vret from "../assets/projectimages/vret.png";
 import aapfl from "../assets/projectimages/aapfl.png";
 import cube from "../assets/projectimages/cube.png";
 import website from "../assets/projectimages/website.png";
-import ProjectCard from "./ProjectCard";
 
 export default function Projects() {
   const projects = [
@@ -145,12 +144,13 @@ export default function Projects() {
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         {projects.map((project) => (
-          <div className="projectcard h-full w-auto aspect-[3/4] bg-white snap-center shrink-0">
+          <div className="projectcard h-full w-auto aspect-[3/4] bg-white snap-center overflow-hidden">
             <img
               className="projectimg object-cover object-right h-full"
               src={project.image}
               draggable="false"
             ></img>
+            <div className="projectinfo w-full h-4/5 bg-white rounded-t-full"></div>
           </div>
         ))}
       </motion.div>

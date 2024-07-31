@@ -15,7 +15,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setEntryAnimationFinished(true);
-    }, 3000);
+    }, 3500);
   });
 
   return entryAnimationFinished ? (
