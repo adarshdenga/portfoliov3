@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+*::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+* {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.entryanimatortext {
+  animation: entry-text-color 2500ms ease forwards;
+}
+
+.contact-link-icon {
+  opacity: 0;
+  display: inline-block;
+}
+
+.contact-link:hover {
+  animation: link-translate 400ms ease forwards;
+}
+
+.contact-link:hover > span {
+  animation: link-icon-visible 700ms ease forwards;
+}
+
+.text-content {
+  position: relative;
+  opacity: 0;
+  animation: fade-in-from-below 2000ms ease forwards;
+}
+
+.text-content:nth-child(1) {
+  animation-delay: 0ms;
+}
+.text-content:nth-child(2) {
+  animation-delay: 50ms;
+}
+.text-content:nth-child(3) {
+  animation-delay: 100ms;
+}
+.text-content:nth-child(4) {
+  animation-delay: 150ms;
+}
+.text-content:nth-child(5) {
+  animation-delay: 200ms;
+}
+.text-content:nth-child(6) {
+  animation-delay: 250ms;
+}
+.text-content:nth-child(7) {
+  animation-delay: 300ms;
+}
+.text-content:nth-child(8) {
+  animation-delay: 350ms;
+}
+.text-content:nth-child(9) {
+  animation-delay: 400ms;
+}
+.text-content:nth-child(10) {
+  animation-delay: 450ms;
+}
+
+/* KEYFRAMES */
+@keyframes fade-in-from-below {
+  0% {
+    bottom: -0.3em;
+    opacity: 0;
+  }
+  10% {
+    bottom: 0em;
+    opacity: 1;
+  }
+  90% {
+    bottom: 0em;
+    opacity: 1;
+  }
+  100% {
+    bottom: 0.3em;
+    opacity: 0;
+  }
+}
+
+@keyframes entry-text-color {
+  0% {
+    color: black;
+  }
+  25% {
+    color: white;
+  }
+  75% {
+    color: white;
+  }
+  100% {
+    color: black;
+  }
+}
+
+@keyframes link-icon-visible {
+  from {
+    opacity: 0;
+    transform: translateX(0em);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0.25em);
+  }
+}
+
+@keyframes link-translate {
+  from {
+    transform: translateX(0em);
+  }
+  to {
+    transform: translateX(2em);
+    color: white;
+  }
+}
+
+@keyframes go-to-color {
+  from {
+    filter: grayscale(1);
+  }
+  to {
+    filter: grayscale(0);
+  }
+}
