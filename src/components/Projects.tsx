@@ -15,7 +15,7 @@ export default function Projects() {
   const projects = [
     {
       name: "EVCP",
-      skills: ["Python", "RL", "AI"],
+      skills: ["Python", "Reinforcement Learning", "AI"],
       image: network,
       link: "https://github.com/adarshdenga/Electric-Vehicle-Charging-Planning",
       about:
