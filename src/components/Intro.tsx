@@ -19,8 +19,6 @@ export default function () {
       >
         and I am a&nbsp; <TextSwitcher />
       </motion.div>
-
-      <img src="../assets/me.jpg"></img>
     </div>
   );
 }
