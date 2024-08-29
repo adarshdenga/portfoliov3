@@ -19,6 +19,10 @@ export default function () {
       >
         and I am a&nbsp; <TextSwitcher />
       </motion.div>
+      <p className="mt-9 text-sm text-gray-500 w-1/2">
+        This website is a work in progress, so whatever you do, do not look at
+        it on mobile... for now.
+      </p>
     </div>
   );
 }
