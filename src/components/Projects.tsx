@@ -135,7 +135,7 @@ export default function Projects() {
   };
 
   return (
-    <div className="flex flex-row w-screen h-screen bg-black items-center snap-x snap-proximity">
+    <div className="flex flex-row w-screen h-screen bg-black items-center snap-x snap-proximity overflow-hidden">
       <motion.div
         className="flex flex-nowrap h-2/3 gap-8 select-none px-8"
         ref={trackref}
