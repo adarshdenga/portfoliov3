@@ -8,7 +8,6 @@ import vret from "../assets/projectimages/vret.png";
 import aapfl from "../assets/projectimages/aapfl.png";
 import cube from "../assets/projectimages/cube.png";
 import website from "../assets/projectimages/website.png";
-import { Link } from "react-router-dom";
 import { FaLink } from "react-icons/fa";
 
 export default function Projects() {
@@ -165,7 +164,7 @@ export default function Projects() {
                 </div>
                 <div className="flex flex-wrap gap-1 text-xs bottom-0">
                   {project.skills.map((skill) => (
-                    <div className="bg-white bg-opacity-55  font-dmsans rounded-full px-2 py-1 text-white">
+                    <div className="bg-white bg-opacity-25 font-dmsans rounded-full px-2 py-1 text-white">
                       {skill}
                     </div>
                   ))}

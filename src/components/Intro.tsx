@@ -19,16 +19,6 @@ export default function () {
       >
         and I am a&nbsp; <TextSwitcher />
       </motion.div>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
-      >
-        <p className="mt-9 text-sm text-gray-500 w-1/2">
-          This website is a work in progress, so whatever you do, do not look at
-          it on mobile... for now.
-        </p>
-      </motion.div>
     </div>
   );
 }

@@ -14,29 +14,48 @@ export default function Contact() {
         <Link
           to={"https://www.linkedin.com/in/adarsh-denga/"}
           target="_blank"
-          className="contact-link py-4"
+          className="group/lilink hover:pl-24 hover:text-white transition-all duration-500"
         >
-          LinkedIn &nbsp; <span className="contact-link-icon">↗</span>
+          LinkedIn &nbsp;{" "}
+          <span className="opacity-0 text-warmGray-500 group-hover/lilink:opacity-100 group-hover/lilink:text-white group-hover/lilink:pl-4 duration-700 transition-all">
+            ↗
+          </span>
         </Link>
         <Link
           to={"https://github.com/adarshdenga"}
           target="_blank"
-          className="contact-link py-4"
+          className="group/ghlink hover:pl-24 hover:text-white transition-all duration-500"
         >
-          Github &nbsp; <span className="contact-link-icon">↗</span>
+          Github &nbsp;{" "}
+          <span className="opacity-0 text-warmGray-500 group-hover/ghlink:opacity-100 group-hover/ghlink:text-white group-hover/ghlink:pl-4 duration-700 transition-all">
+            ↗
+          </span>
         </Link>
-        <Link to={Resume} target="_blank" className="contact-link py-4">
-          Résumé &nbsp; <span className="contact-link-icon">↗</span>
+        <Link
+          to={Resume}
+          target="_blank"
+          className="group/cvlink hover:pl-24 hover:text-white transition-all duration-500"
+        >
+          Résumé &nbsp;{" "}
+          <span className="opacity-0 text-warmGray-500 group-hover/cvlink:opacity-100 group-hover/cvlink:text-white group-hover/cvlink:pl-4 duration-700 transition-all">
+            ↗
+          </span>
         </Link>
         <Link
           to="mailto:adarshdenga@gmail.com"
           target="_blank"
-          className="contact-link py-4"
+          className="group/emlink hover:pl-24 hover:text-white transition-all duration-500"
         >
-          Email &nbsp; <span className="contact-link-icon">↗</span>
+          Email &nbsp;{" "}
+          <span className="opacity-0 text-warmGray-500 group-hover/emlink:opacity-100 group-hover/emlink:text-white group-hover/emlink:pl-4 duration-700 transition-all">
+            ↗
+          </span>
         </Link>
-        <div className="contact-link py-4">
-          Phone &nbsp; <span className="contact-link-icon">+31 645297034</span>
+        <div className="group/nulink hover:pl-24 hover:text-white transition-all duration-500">
+          Phone &nbsp;{" "}
+          <span className="opacity-0 text-warmGray-500 group-hover/nulink:opacity-100 group-hover/nulink:text-white group-hover/nulink:pl-4 duration-700 transition-all">
+            +31 645297034
+          </span>
         </div>
       </motion.div>
     </div>
