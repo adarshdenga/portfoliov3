@@ -8,6 +8,8 @@ import vret from "../assets/projectimages/vret.png";
 import aapfl from "../assets/projectimages/aapfl.png";
 import cube from "../assets/projectimages/cube.png";
 import website from "../assets/projectimages/website.png";
+import { Link } from "react-router-dom";
+import { FaLink } from "react-icons/fa";
 
 export default function Projects() {
   const projects = [
@@ -144,13 +146,32 @@ export default function Projects() {
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         {projects.map((project) => (
-          <div className="projectcard h-full w-auto aspect-[3/4] bg-white snap-center overflow-hidden">
+          <div className="projectcard relative h-full w-auto aspect-[3/4] overflow-hidden">
             <img
-              className="projectimg object-cover object-right h-full"
+              className="projectimg absolute object-cover object-right h-full"
               src={project.image}
               draggable="false"
             ></img>
-            <div className="projectinfo w-full h-4/5 bg-white rounded-t-full"></div>
+            <div className="absolute flex flex-col justify-between w-full h-full p-8">
+              <div className=" flex flex-row justify-between text-2xl font-extrabold text-white font-dmsans">
+                {project.name}
+                <a href={project.link}>
+                  <FaLink />
+                </a>
+              </div>
+              <div className="flex flex-col h-1/4 justify-between">
+                <div className="text-lg font-semibold text-white font-dmsans">
+                  {project.about}
+                </div>
+                <div className="flex flex-wrap gap-1 text-xs bottom-0">
+                  {project.skills.map((skill) => (
+                    <div className="bg-white bg-opacity-55  font-dmsans rounded-full px-2 py-1 text-white">
+                      {skill}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         ))}
       </motion.div>

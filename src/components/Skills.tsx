@@ -74,7 +74,7 @@ export default function Skills() {
               <textPath
                 ref={textmover}
                 href="#curve"
-                className="text-xs  font-rubik"
+                className="text-lg  font-rubik"
                 startOffset={"-60%"}
               >
                 HTML ⁕ CSS ⁕ JAVASCRIPT ⁕ TYPESCRIPT ⁕ REACT ⁕ SVELTE ⁕ PYTHON ⁕

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import Resume from "../assets/Resume.pdf";
 
 export default function Contact() {
   return (
@@ -24,10 +25,14 @@ export default function Contact() {
         >
           Github &nbsp; <span className="contact-link-icon">↗</span>
         </Link>
-        <Link to={""} target="_blank" className="contact-link py-4">
+        <Link to={Resume} target="_blank" className="contact-link py-4">
           Résumé &nbsp; <span className="contact-link-icon">↗</span>
         </Link>
-        <Link to={""} target="_blank" className="contact-link py-4">
+        <Link
+          to="mailto:adarshdenga@gmail.com"
+          target="_blank"
+          className="contact-link py-4"
+        >
           Email &nbsp; <span className="contact-link-icon">↗</span>
         </Link>
         <div className="contact-link py-4">
