@@ -18,7 +18,7 @@ export default function Projects() {
       image: network,
       link: "https://github.com/adarshdenga/Electric-Vehicle-Charging-Planning",
       about:
-        "An actor-critic based Reinforcement Learning model to simualte optimal EV charging within a DC grid.",
+        "An actor-critic based Reinforcement Learning model to simulate optimal EV charging within a DC grid.",
     },
     {
       name: "Circles in a Square",

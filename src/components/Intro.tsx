@@ -3,7 +3,7 @@ import TextSwitcher from "./TextSwitcher";
 
 export default function () {
   return (
-    <div className="container flex flex-col text-7xl font-bold font-dmsans bg-black py-8 pt-52">
+    <div className="container flex flex-col text-7xl font-bold font-dmsans bg-black py-28 pt-52">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

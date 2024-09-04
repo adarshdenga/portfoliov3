@@ -36,7 +36,8 @@ export default function Skills() {
   ];
 
   const container = useRef(null);
-  const textmover = useRef(null);
+  const textmover1 = useRef(null);
+  const textmover2 = useRef(null);
   const { scrollYProgress } = useScroll({
     // container: container,
     // offset: ["start end", "end end"],
@@ -44,7 +45,8 @@ export default function Skills() {
 
   useEffect(() => {
     scrollYProgress.on("change", (e) => {
-      textmover.current.setAttribute("startOffset", -60 + e * 60 + "%");
+      textmover1.current.setAttribute("startOffset", -60 + e * 60 + "%");
+      textmover2.current.setAttribute("startOffset", -e * 80 + "%");
     });
   });
 
@@ -55,44 +57,81 @@ export default function Skills() {
   ></motion.div>;
 
   return (
-    <div className="w-full h-screen pt-24 bg-black ">
+    <div className="w-full h-screen bg-black ">
       <motion.div
-        className="flex-1 w-full h-full py-20 bg-white rounded-t-3xl "
+        className="flex-grow w-full h-full py-20 bg-white rounded-t-3xl"
         ref={container}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
       >
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="-600 -30 1200 200">
-          <motion.path
-            id="curve"
-            d="M -600 60 C 0 -180 0 300 600 60"
-            fill="none"
-          />
-          <g fill="black">
-            <text>
-              <textPath
-                ref={textmover}
-                href="#curve"
-                className="text-lg  font-rubik"
-                startOffset={"-60%"}
-              >
-                HTML ⁕ CSS ⁕ JAVASCRIPT ⁕ TYPESCRIPT ⁕ REACT ⁕ SVELTE ⁕ PYTHON ⁕
-                JAVA ⁕ C# ⁕ PYTORCH ⁕ LLMS ⁕ PROMPTING ⁕ HASKELL ⁕ NUMPY ⁕
-                PANDAS ⁕ MATPLOTLIB ⁕ SQL ⁕ GITHUB ⁕ AGILE ⁕ SCRUM ⁕ DATA ⁕
-                QUERIES ⁕ LINUX ⁕ WINDOWS
-              </textPath>
-            </text>
-          </g>
-        </svg>
+        <div className="static">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="-600 170 1200 200"
+            width="100%"
+            height="100%"
+            className="absolute"
+          >
+            <motion.path
+              id="curve1"
+              d="M -600 60 C 0 -180 0 300 600 60"
+              fill="none"
+            />
+            <g fill="black">
+              <text>
+                <textPath
+                  ref={textmover1}
+                  href="#curve1"
+                  className="text-lg font-rubik"
+                  startOffset={"-60%"}
+                >
+                  HTML ⁕ CSS ⁕ JAVASCRIPT ⁕ TYPESCRIPT ⁕ REACT ⁕ SVELTE ⁕ PYTHON
+                  ⁕ JAVA ⁕ C# ⁕ PYTORCH ⁕ LLMS ⁕ PROMPTING ⁕ HASKELL ⁕ NUMPY ⁕
+                  PANDAS ⁕ MATPLOTLIB ⁕ SQL ⁕ GITHUB ⁕ AGILE ⁕ SCRUM ⁕ DATA ⁕
+                  QUERIES ⁕ LINUX ⁕ WINDOWS
+                </textPath>
+              </text>
+            </g>
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="-900 -250 1200 200"
+            width="100%"
+            height="100%"
+            className="absolute"
+          >
+            <motion.path
+              id="curve2"
+              d="M -1042 -233 C -524 -171 -735 171 -296 223 C 142 173 -16 -102 366 -205"
+              fill="none"
+            />
+            <g fill="black">
+              <text>
+                <textPath
+                  ref={textmover2}
+                  href="#curve2"
+                  className="text-lg font-rubik"
+                  startOffset={"0%"}
+                >
+                  HTML ⁕ CSS ⁕ JAVASCRIPT ⁕ TYPESCRIPT ⁕ REACT ⁕ SVELTE ⁕ PYTHON
+                  ⁕ JAVA ⁕ C# ⁕ PYTORCH ⁕ LLMS ⁕ PROMPTING ⁕ HASKELL ⁕ NUMPY ⁕
+                  PANDAS ⁕ MATPLOTLIB ⁕ SQL ⁕ GITHUB ⁕ AGILE ⁕ SCRUM ⁕ DATA ⁕
+                  QUERIES ⁕ LINUX ⁕ WINDOWS
+                </textPath>
+              </text>
+            </g>
+          </svg>
+        </div>
 
-        <div className="flex flex-col w-full justify-center items-center pt-44">
-          <p className="text-black font-dmsans text-2xl">
-            Here's what I work with most often :)
-          </p>
-          <div className="flex flex-wrap pt-16 w-1/2 justify-center gap-2">
+        <div className="flex flex-col w-full h-full justify-end items-center pb-48">
+          <p className="text-black font-dmsans text-2xl font-bold">My Tools</p>
+          <div className="flex flex-wrap pt-8 w-1/2 justify-center gap-2">
             {skills.map((skill) => (
-              <div className="flex flex-row justify-center gap-2 p-4 bg-black rounded-full font-dmsans text-lg">
+              <div
+                className="flex flex-row justify-center items-center gap-2 p-4 bg-black rounded-full font-dmsans text-lg"
+                key={skill.name}
+              >
                 <img src={skill.source} className="h-6 w-6"></img>
                 <div>{skill.name}</div>
               </div>
