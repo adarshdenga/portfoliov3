@@ -37,7 +37,7 @@ export default function Skills() {
 
   const container = useRef(null);
   const textmover1 = useRef(null);
-  const textmover2 = useRef(null);
+  // const textmover2 = useRef(null);
   const { scrollYProgress } = useScroll({
     // container: container,
     // offset: ["start end", "end end"],
@@ -46,7 +46,7 @@ export default function Skills() {
   useEffect(() => {
     scrollYProgress.on("change", (e) => {
       textmover1.current.setAttribute("startOffset", -60 + e * 60 + "%");
-      textmover2.current.setAttribute("startOffset", -e * 80 + "%");
+      // textmover2.current.setAttribute("startOffset", -e * 80 + "%");
     });
   });
 
@@ -94,7 +94,7 @@ export default function Skills() {
               </text>
             </g>
           </svg>
-          <svg
+          {/* <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="-900 -250 1200 200"
             width="100%"
@@ -121,7 +121,7 @@ export default function Skills() {
                 </textPath>
               </text>
             </g>
-          </svg>
+          </svg> */}
         </div>
 
         <div className="flex flex-col w-full h-full justify-end items-center pb-48">
